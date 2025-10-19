@@ -1,0 +1,55 @@
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --text: #ffffff;
+  --text-muted: #9ba1ae;
+  --accent: #ff9f3f;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: rows;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.app-identity {
+  display: flex;
+  flex-direction: rows;
+  margin-left: 0;
+  gap: 16px;
+}
+
+.app-name {
+  margin-top: 20px;
+}
+
+.app-logo {
+  width: 80px;
+  height: 80px;
+  margin: 16px 0px 0px 16px;
+}
+
+.user-section {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+  gap: 32px;
+}
+
+.search-icon,
+.profile-pic {
+  width: 48px;
+}
