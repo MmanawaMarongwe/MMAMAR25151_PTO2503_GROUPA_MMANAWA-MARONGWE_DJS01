@@ -1,9 +1,9 @@
-const gDropdown = document.getElementById("genre-options");
-
-export function createGenreOpt(genre) {
+/**
+ * This function creates an o
+ * @param {*} genre - The genre of a podcast
+ */
+export function createOpt(selectEl, value) {
   const option = document.createElement("option");
-  option.className = "genreName";
-  option.textContent = genre.title;
-  gDropdown.appendChild(option);
-  return option;
+  option.value = value;
+  selectEl.appendChild(option);
 }
