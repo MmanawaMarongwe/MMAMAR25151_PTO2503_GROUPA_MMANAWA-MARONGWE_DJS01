@@ -2,6 +2,7 @@
   --bg: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
   --text: #ffffff;
   --text-muted: #9ba1ae;
+  --border-line: rgba(128, 128, 128, 0.278);
   --accent: #ff9f3f;
 }
 
@@ -18,7 +19,7 @@ header {
   padding-bottom: 0px;
   justify-content: space-between;
   align-items: center;
-  border-bottom: var(--text-muted) 0.5px solid;
+  border-bottom: var(--border-line) 0.5px solid;
 }
 
 h1 {
@@ -30,6 +31,12 @@ h1 {
 label {
   font-size: 20px;
   color: var(--text);
+}
+
+select {
+  padding: 12px;
+  border-radius: 8px;
+  margin: 0px 8px;
 }
 
 .app-identity {
@@ -59,4 +66,8 @@ label {
 .search-icon,
 .profile-pic {
   width: 48px;
+}
+
+.filter-area {
+  margin-top: 24px;
 }
