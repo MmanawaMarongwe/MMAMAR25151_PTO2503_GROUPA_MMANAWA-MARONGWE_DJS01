@@ -34,9 +34,17 @@ label {
 }
 
 select {
+  position: relative;
   padding: 12px;
   border-radius: 8px;
   margin: 0px 8px;
+}
+
+option {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
 }
 
 .app-identity {
@@ -69,5 +77,6 @@ select {
 }
 
 .filter-area {
+  position: relative;
   margin-top: 24px;
 }
