@@ -6,5 +6,6 @@
 export function createOpt(selectEl, value) {
   const option = document.createElement("option");
   option.value = value;
+  option.textContent = value;
   selectEl.appendChild(option);
 }
