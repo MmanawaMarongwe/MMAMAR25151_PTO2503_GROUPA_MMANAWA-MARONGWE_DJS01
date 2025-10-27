@@ -3,6 +3,7 @@ export function createCard(gridEl, cover, name) {
   card.className = "card";
   const image = document.createElement("img");
   const title = document.createElement("p");
+
   image.src = cover;
   image.className = "cover";
   title.textContent = name;
