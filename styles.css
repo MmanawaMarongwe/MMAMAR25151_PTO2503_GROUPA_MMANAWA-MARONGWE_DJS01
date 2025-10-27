@@ -101,3 +101,56 @@ option {
   background: var(--card-bg);
   padding: 24px;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  label {
+    font-size: 12px;
+  }
+  select {
+    padding: 4px;
+  }
+
+  .app-identity {
+    margin-bottom: 8px;
+    margin-top: 0;
+    gap: 8px;
+  }
+
+  .app-logo {
+    width: 24px;
+    height: 24px;
+    margin: 16px 0px 0px 16px;
+  }
+
+  .search-icon,
+  .profile-pic {
+    width: 16px;
+  }
+
+  .user-section {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+
+  .podcast-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin-top: 20px;
+  }
+  .cover {
+    width: 310px;
+    height: 200px;
+    margin: 4px;
+  }
+  .card {
+    width: 320px;
+    background: var(--card-bg);
+    padding: 14px;
+  }
+}
