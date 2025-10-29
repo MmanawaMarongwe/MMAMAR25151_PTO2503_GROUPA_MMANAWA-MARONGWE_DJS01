@@ -14,16 +14,16 @@ export function makePodcast(podcastData, genres) {
     image: podcastData.image,
     seasons: podcastData.seasons || [],
     description: podcastData.description || "",
-    updatedAt: podcastData.updatedAt,
+    updated: podcastData.updated,
 
     genreNames() {
       const ids = podcastData.genres || [];
-      return ids.map(genreTitleById).filter(Boolean); // → ["Crime", "Drama"]
+      return ids.map(genreTitleById).filter(Boolean); //return an array of titles if their id
     },
 
     formattedUpdatedAt() {
-      if (!podcastData.updatedAt) return "—";
-      return new Date(podcastData.updatedAt).toLocaleDateString();
+      if (!podcastData.updated) return "—";
+      return new Date(podcastData.updated).toLocaleDateString();
     },
 
     seasonSummaries() {
