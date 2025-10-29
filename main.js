@@ -16,7 +16,7 @@ podcasts.forEach((podcast) => {
     name: pod.title,
     seasons: pod.seasons,
     genreTags: pod.genreNames(),
-    lastUpdate: pod.updatedAt,
+    lastUpdate: pod.formattedUpdatedAt(),
   });
 
   podGrid.appendChild(podcastCard);
