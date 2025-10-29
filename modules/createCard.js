@@ -8,7 +8,7 @@ export function createCard({
   const card = document.createElement("div");
   card.className = "card";
   const image = document.createElement("img");
-  const title = document.createElement("p");
+  const title = document.createElement("h4");
   const nSeasons = document.createElement("p");
   nSeasons.className = "seasons-text";
   const tags = document.createElement("div");
@@ -26,8 +26,8 @@ export function createCard({
   image.src = cover;
   image.className = "cover";
   title.textContent = name;
-  nSeasons.textContent = `${seasons} seasons`;
-  dateUp.textContent = lastUpdate;
+  nSeasons.textContent = `♡ ${seasons} seasons`;
+  dateUp.textContent = `Updated ${lastUpdate}`;
   card.append(image, title, nSeasons, tags, dateUp);
   return card;
 }

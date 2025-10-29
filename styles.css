@@ -102,6 +102,29 @@ option {
   padding: 24px;
 }
 
+.seasons-text {
+  color: var(--accent);
+}
+.genre-tags {
+  display: flex;
+  flex-direction: rows;
+  gap: 4px;
+  margin-bottom: 16pxs;
+}
+
+.tag {
+  color: var(--accent);
+  background-color: #161b22;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+.updated-date {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 16px;
