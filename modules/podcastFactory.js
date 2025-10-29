@@ -22,8 +22,18 @@ export function makePodcast(podcastData, genres) {
     },
 
     formattedUpdatedAt() {
-      if (!podcastData.updated) return "—";
-      return new Date(podcastData.updated).toLocaleDateString();
+      const lastUpdate = podcastData.updated;
+      if (!lastUpdate) return "—";
+      const updatedDate = new Date(lastUpdate);
+      const now = new Date();
+      const diffInMonths = now - updatedDate;
+      const diffInDays = Math.floor(diffInMonths / (1000 * 60 * 60 * 24));
+
+      if (diffInDays < 1) return "Today";
+      if (diffInDays === 1) return "1 day ago";
+      if (diffInDays < 7) return `${diffInDays} days ago`;
+      if (diffInDays < 30) return `${Math.floor(diffInDays / 7)} weeks ago`;
+      return `${Math.floor(diffInDays / 30)} months ago`;
     },
 
     seasonSummaries() {
