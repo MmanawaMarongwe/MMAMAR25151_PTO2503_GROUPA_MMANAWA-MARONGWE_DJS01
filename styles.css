@@ -125,6 +125,32 @@ option {
   font-size: 14px;
 }
 
+.overlay .open {
+  position: fixed;
+  inset: 0; /* stretch full viewport */
+  background: rgba(0, 0, 0, 0.65); /* dim background */
+  display: none; /* hidden by default */
+  justify-content: center; /* center modal horizontally */
+  align-items: center; /* center modal vertically */
+}
+
+.modal {
+  background: var(--card-bg);
+  width: 50rem;
+  height: 50rem;
+  padding: 32px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.625rem;
+}
+
+.modal-image {
+  width: 300px;
+  height: 300px;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 16px;
