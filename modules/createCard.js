@@ -7,27 +7,14 @@ export function createCard({
 }) {
   const card = document.createElement("div");
   card.className = "card";
-  const image = document.createElement("img");
-  const title = document.createElement("h4");
-  const nSeasons = document.createElement("p");
-  nSeasons.className = "seasons-text";
-  const tags = document.createElement("div");
-  tags.className = "genre-tags";
-  const dateUp = document.createElement("p");
-  dateUp.className = "updated-date";
-
-  genreTags.forEach((genre) => {
-    const tag = document.createElement("span");
-    tag.className = "tag";
-    tag.textContent = genre;
-    tags.append(tag);
-  });
-
-  image.src = cover;
-  image.className = "cover";
-  title.textContent = name;
-  nSeasons.textContent = `♡ ${seasons} seasons`;
-  dateUp.textContent = `Updated ${lastUpdate}`;
-  card.append(image, title, nSeasons, tags, dateUp);
+  card.innerHTML = `
+    <img class="cover" src="${cover}" alt="${name}">
+    <h4>${name}</h4>
+    <p class="seasons-text">♡ ${seasons} seasons</p>
+    <div class="genre-tags">
+      ${genreTags.map((genre) => `<span class="tag">${genre}</span>`).join("")}
+    </div>
+    <p class="updated-date">Updated ${lastUpdate}</p>
+  `;
   return card;
 }
