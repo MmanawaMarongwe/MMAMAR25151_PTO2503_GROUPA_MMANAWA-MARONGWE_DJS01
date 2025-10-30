@@ -4,14 +4,13 @@ export function createModal({
   description,
   genreTags = [],
   lastUpdate,
-  seasonsInfo = [],
 }) {
-  const modalBox = document.createElement("div");
-  modalBox.className = "modalBox";
-  modalBox.innerHTML = `<h2>${name}</h2>
+  const modal = document.createElement("div");
+  modal.className = "modal";
+  modal.innerHTML = `<h2>${name}</h2>
     <div>
         <div>
-          <img src="${cover}" alt="${name} cover" />
+          <img src="${cover}" alt="${name} cover" class="modal-image" />
         </div>
         <div> 
             <h3>Description</h3>
@@ -26,10 +25,13 @@ export function createModal({
         </div>
     </div> 
     <div>
-        <h1>Seasons</h1>
+       
+    `;
+
+  return modal;
+}
+/*<h1>Seasons</h1>
             <div>${seasonsInfo
               .map((season) => `<div class="season"> ${season}</div>`)
               .join("")}</div>
-    </div>
-    `;
-}
+    </div>*/
