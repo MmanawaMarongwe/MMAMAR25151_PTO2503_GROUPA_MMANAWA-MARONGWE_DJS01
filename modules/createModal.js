@@ -14,14 +14,14 @@ export function createModal({
         </div>
         <div class="info-grid"> 
             <h3>Description</h3>
-            <p>${description}</p>
+            <p class="text-muted">${description}</p>
             <h3>Genres</h3>
             <div class="genre-tags">
                 ${genreTags
                   .map((genre) => `<span class="tag">${genre}</span>`)
                   .join("")}
             </div>
-            <p>${lastUpdate}</p>
+            <p class="text-muted">Last updated ${lastUpdate}</p>
         </div>
     </div> 
     <div>

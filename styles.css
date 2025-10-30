@@ -120,7 +120,7 @@ option {
   border-radius: 12px;
 }
 
-.updated-date {
+.text-muted {
   color: var(--text-muted);
   font-size: 14px;
 }
@@ -136,14 +136,15 @@ option {
 
 .modal {
   background: var(--card-bg);
-  width: 50rem;
-  height: 40rem;
+  width: 55rem;
+  height: 55rem;
   padding: 32px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 70%;
   transform: translate(-50%, -50%);
   border-radius: 0.625rem;
+  opacity: 85;
 }
 
 .modal-image {
@@ -155,6 +156,7 @@ option {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 32px;
+  align-items: center;
 }
 
 .image-grid {

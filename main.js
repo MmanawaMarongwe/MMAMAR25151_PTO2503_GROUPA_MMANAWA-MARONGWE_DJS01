@@ -26,6 +26,7 @@ podcasts.forEach((podcast) => {
     const modal = createModal({
       cover: pod.image,
       name: pod.title,
+      description: pod.description,
       seasons: pod.seasons,
       genreTags: pod.genreNames(),
       lastUpdate: pod.formattedUpdatedAt(),
