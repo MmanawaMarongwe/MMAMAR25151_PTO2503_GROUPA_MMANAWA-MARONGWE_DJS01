@@ -137,7 +137,7 @@ option {
 .modal {
   background: var(--card-bg);
   width: 50rem;
-  height: 50rem;
+  height: 40rem;
   padding: 32px;
   position: absolute;
   left: 50%;
@@ -149,6 +149,20 @@ option {
 .modal-image {
   width: 300px;
   height: 300px;
+}
+
+.podcast-info {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+
+.image-grid {
+  grid-column: span 2;
+}
+
+.info-grid {
+  grid-column: span 3;
 }
 
 @media (max-width: 768px) {

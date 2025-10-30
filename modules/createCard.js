@@ -14,7 +14,7 @@ export function createCard({
     <div class="genre-tags">
       ${genreTags.map((genre) => `<span class="tag">${genre}</span>`).join("")}
     </div>
-    <p class="updated-date">Updated ${lastUpdate}</p>
+    <p class="text-muted">Updated ${lastUpdate}</p>
   `;
   return card;
 }

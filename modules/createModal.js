@@ -8,11 +8,11 @@ export function createModal({
   const modal = document.createElement("div");
   modal.className = "modal";
   modal.innerHTML = `<h2>${name}</h2>
-    <div>
-        <div>
+    <div class = "podcast-info">
+        <div class = "image-grid">
           <img src="${cover}" alt="${name} cover" class="modal-image" />
         </div>
-        <div> 
+        <div class="info-grid"> 
             <h3>Description</h3>
             <p>${description}</p>
             <h3>Genres</h3>
