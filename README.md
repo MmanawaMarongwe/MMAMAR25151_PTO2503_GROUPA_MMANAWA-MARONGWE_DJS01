@@ -66,23 +66,29 @@ The app focuses on modular code architecture, OOP principles, and clean, maintai
 Each module follows **Single Responsibility**, ensuring clear, reusable, and testable code.  
 
 ---
-## 🧠 Code Quality  
-- Follows **SOLID** principles for structure and maintainability.  
-- Written using **ES6+** features (destructuring, template literals, arrow functions).  
-- Modular organization ensures reusable, testable, and scalable code.  
-- Clear naming conventions and inline documentation for readability.  
+### 💻 Code Structure & Maintainability
+- JavaScript is divided into focused modules (`createCard`, `createModal`, `makePodcast`, etc.).  
+- The main entry file (`main.js`) only initializes and starts the app.  
+- The `createPodcastApp` factory coordinates data, UI elements, and module imports.  
+- Each helper file performs a single function, ensuring modularity and reusability.  
+- Naming conventions and consistent indentation follow clean code standards.  
 
 ---
 
-## 🎯 Future Improvements  
-- Add **genre-based filtering** functionality.  
-- Include a **search bar** for finding specific podcasts.  
-- Integrate a **real podcast API** for dynamic, live data.
+### ✅ Expected Outcome
 
-  
+A fully functional **Podcast App** where:
+
+- Users can browse podcasts on the landing page.  
+- Clicking a card opens a modal with detailed podcast information.  
+- Modals are accessible and can be closed in multiple ways.  
+- The app is responsive, modular, and uses SOLID/OOP concepts correctly.  
+
 ---
 
-## Deliverables
+## 🔮 Future Improvements
+- Add **genre-based filtering** to view podcasts by category.  
+- Implement a **search bar** for podcast titles.  
+- Integrate a **real podcast API** for dynamic content.  
 
-- A fully functional, responsive podcast preview web application.
-- Clean, well-commented source code (HTML, CSS, JS).
+---
