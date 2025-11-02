@@ -2,34 +2,35 @@
 
 ## Overview
 
-You will design and build a responsive web application that allows users to **browse podcast shows** on a landing page and **view detailed information** in a modal. The application should display clear, concise previews of podcast shows and offer additional information through a modal pop-up, **all without navigating away from the page**. Your app should showcase clean code architecture and strong UI/UX design while following JavaScript best practices.
+This project is a responsive podcast web application built with Vanilla JavaScript. It allows users to browse podcast shows on a landing page and view detailed information in a modal pop-up, all without leaving the page.
+
+The app focuses on modular code architecture, OOP principles, and clean, maintainable JavaScript following the SOLID guidelines.
 
 ---
+## 🧠 Features
 
-## Core Objectives
+### 🎙️ Landing Page – Podcast Previews
 
-### 1. Landing Page – Podcast Previews
+- Dynamically renders a grid of podcast previews.
+- Each podcast card includes:
+  - 🎨 Cover image  
+  - 🎧 Podcast title  
+  - 📅 Number of seasons  
+  - 🏷️ Genre names  
+  - ⏰ Last updated date (formatted for readability)
 
-- Display a list of podcast shows on the landing page.
-- Each podcast preview must include:
-  - Cover image
-  - Show title
-  - Number of seasons
-  - Genre names
-  - Last updated date (in a human-readable format)
+### 💬 Modal View – Show Details
 
-### 2. Modal View – Show Details
-
-- When a user clicks on a podcast preview, open a modal.
-- The modal should include:
-  - Larger cover image
-  - Podcast title
-  - Description of the show
-  - Genre tags
-  - Last updated date (readable format)
-  - List of season titles
-  - Number of episodes in each season
-- Include a clear and accessible way to **close the modal**.
+- Clicking a podcast card opens a modal with:
+  - Larger cover image  
+  - Full podcast description  
+  - Genre tags  
+  - Season titles with episode counts  
+  - Last updated date (human-readable)
+- The modal can be closed via:
+  - Overlay click  
+  - Close button  
+  - Escape key  
 
 ### 3. Code Architecture & Best Practices
 
