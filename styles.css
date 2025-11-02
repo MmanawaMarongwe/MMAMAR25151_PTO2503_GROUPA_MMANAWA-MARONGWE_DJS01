@@ -125,14 +125,13 @@ option {
   font-size: 14px;
 }
 
-.overlay .open {
+.overlay {
   position: fixed;
   inset: 0; /* stretch full viewport */
-  background: rgba(0, 0, 0, 0.65); /* dim background */
-  display: none; /* hidden by default */
+  background: rgba(0, 0, 0, 0.8); /* dim background */
+  display: none;
   justify-content: center; /* center modal horizontally */
   align-items: center; /* center modal vertically */
-  max-height: 30vh;
 }
 
 .modal {
@@ -145,7 +144,6 @@ option {
   top: 60%;
   transform: translate(-50%, -50%);
   border-radius: 0.625rem;
-  opacity: 85;
   overflow-y: auto;
 }
 
@@ -181,8 +179,9 @@ option {
   flex-direction: row;
   justify-content: space-between;
   border: solid 1px var(--border-line);
-  padding: 24px;
-  margin: 8px;
+  padding: 32px;
+  margin: 8px 0px 8px 0px;
+  border-radius: 16px;
 }
 
 @media (max-width: 768px) {
