@@ -40,11 +40,13 @@ The app focuses on modular code architecture, OOP principles, and clean, maintai
 
 ---
 
-## 📖 How to Use  
-1. Open `index.html` in your browser using **Live Server**).  
-2. Browse the **podcast previews** displayed on the landing page.  
-3. Click a podcast card to **open the modal** and view detailed information.  
-4. Close the modal by clicking the **overlay**, **close button**, or pressing the **Escape key**.  
+## 📂 Setup Instructions
+1. Clone or download this repository.  
+2. Open the project folder on your computer.  
+3. Launch `index.html` in your browser (or run with **Live Server**).  
+4. Browse the list of podcasts displayed on the main page.  
+5. Click any podcast card to open its modal view.  
+6. Close the modal by clicking the overlay, the close button, or pressing **Escape**.  
 
 
 ## 🧩 Code Architecture  
