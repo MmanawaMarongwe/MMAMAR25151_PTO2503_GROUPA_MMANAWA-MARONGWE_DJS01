@@ -1,3 +1,14 @@
+/**
+ *
+ * @param {Object} param0 - Podcast data.
+ * @param {string} param0.cover - Image URL for the podcast cover.
+ * @param {string} param0.name - Podcast title to display.
+ * @param {number} param0.seasons - Total number of seasons.
+ * @param {string[]} [param0.genreTags=[]] - Genre labels (each becomes a <span>).
+ * @param {string} param0.lastUpdate - Human-readable last updated text (e.g., "2 weeks ago").
+ * @returns {HTMLDivElement} - The root <div class="card"> element, the podcast card
+ *
+ */
 export function createCard({
   cover,
   name,

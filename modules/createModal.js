@@ -1,3 +1,18 @@
+/**
+ * Build a podcast details modal element.
+ *
+ * Creates a `<div class="modal">` with cover, description, genre tags, and a seasons list.
+ *
+ * @param {Object} params
+ * @param {string} params.name - Podcast title.
+ * @param {string} params.cover - Cover image URL.
+ * @param {string} params.description - Short description text.
+ * @param {string[]} [params.genreTags=[]] - Genre labels to render as tags.
+ * @param {string} params.lastUpdate - Human-readable last updated text (e.g., "2 weeks ago").
+ * @param {{title?: string, episodes?: number}[]} [params.seasonsInfo=[]] - Seasons to display.
+ * @returns {HTMLDivElement} The constructed modal element (not yet attached to the DOM).
+ */
+
 export function createModal({
   name,
   cover,

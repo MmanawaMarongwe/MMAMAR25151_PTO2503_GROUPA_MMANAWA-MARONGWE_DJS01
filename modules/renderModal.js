@@ -2,6 +2,16 @@
 import { createModal } from "./createModal.js";
 import { modalState } from "./modalState.js";
 
+/**
+ * Open and wire the podcast details modal.
+ *
+ * Builds a modal from `pod` with `createModal`, appends it to `modalContainer`,
+ * opens it via `modalState`, and binds close handlers (overlay click, "X" button, Escape key).
+ *
+ * @param {{image:string, title:string, description:string, genreNames:() => string[], formattedUpdatedAt:() => string, seasonTitles:() => string[]}} pod
+ * @param {HTMLElement} modalContainer - Overlay/root element that hosts the modal.
+ * @returns {void}
+ */
 export function renderModal(pod, modalContainer) {
   const modal = createModal({
     cover: pod.image,

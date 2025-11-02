@@ -1,9 +1,22 @@
 /**
- * This function creates a simple Podcast object.
+ * Create a podcast view model (data + small helper methods) for the UI.
+ * - Resolves genre IDs → names
+ * - Formats `updated` into human text (e.g., "Today", "2 weeks ago")
+ * - Exposes season info for the podcast
  *
- * @param {object} podcastData - Each podcast object item from the podcasts array.
- * @param {Array<Object>} genres - All genre objects to match IDs and return their names.
- * @returns {Object} A podcast object with formatted data and utility functions
+ * @param {{id:string,title:string,image:string,seasons?:number|any[],description?:string,updated?:string|number|Date,genres?:string[]}} podcastData -  A single item from  podcasts array.
+ * @param {{id:string,title:string}[]} genres - All genres; used to map podcast genre IDs to names.
+ * @param {{id:string,seasonDetails:Array<{title?:string,episodes?:number}>}[]} seasons - Season rows keyed by podcast id; used by `seasonTitles()`.
+ * @returns {{
+ *   id: string,
+ *   title: string,
+ *   image: string,
+ *   seasons: number|any[],
+ *   description: string,
+ *   updated: string|number|Date|undefined,
+ *   genreNames: () => string[],
+ *   formattedUpdatedAt: () => string,
+ *   seasonTitles: () => Array<{title?:string,episodes?:number}>|undefined }} - Plain object ready for rendering with podcast with helper methods.
  */
 export function makePodcast(podcastData, genres, seasons) {
   const genreTitleById = (id) => genres.find((g) => g.id === id)?.title;
