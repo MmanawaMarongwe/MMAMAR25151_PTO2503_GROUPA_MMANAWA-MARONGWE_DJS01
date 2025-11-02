@@ -23,7 +23,8 @@ export function createModal({
     })
     .join("");
 
-  modal.innerHTML = `<h2>${name}</h2>
+  modal.innerHTML = `<span class="modal-close">&times;</span><h2>${name}</h2>
+  <div>
     <div class = "podcast-info">
         <div class = "image-grid">
           <img src="${cover}" alt="${name} cover" class="modal-image" />
@@ -39,14 +40,15 @@ export function createModal({
             </div>
             <p class="text-muted">Last updated ${lastUpdate}</p>
         </div>
-        <div>
+    </div>
+        <div >
             <h2>Seasons</h2>
             <div>
               ${seasonsHTML}
             </div>
         </div>
         
-    </div> 
+  </div> 
        
     `;
 

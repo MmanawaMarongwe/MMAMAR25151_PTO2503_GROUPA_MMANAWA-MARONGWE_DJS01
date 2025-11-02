@@ -149,6 +149,12 @@ option {
   overflow-y: auto;
 }
 
+.modal-close {
+  float: right;
+  color: #ea5555;
+  top: 80%;
+}
+
 .modal-image {
   width: 300px;
   height: 300px;
@@ -167,6 +173,16 @@ option {
 
 .info-grid {
   grid-column: span 3;
+}
+
+.season-row {
+  width: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: solid 1px var(--border-line);
+  padding: 24px;
+  margin: 8px;
 }
 
 @media (max-width: 768px) {
