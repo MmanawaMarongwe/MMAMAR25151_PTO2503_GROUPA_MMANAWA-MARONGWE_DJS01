@@ -16,7 +16,9 @@ export function createModal({
         <div class="season">
           <div class="season-row">
             <strong class="season-title">${sTitle}</strong>
-            <span class="text-muted">${ep} episode${ep === 1 ? "" : "s"}</span>
+            <span class="text-muted episodes-count">${ep} episode${
+        ep === 1 ? "" : "s"
+      }</span>
           </div>
         </div>
       `;
