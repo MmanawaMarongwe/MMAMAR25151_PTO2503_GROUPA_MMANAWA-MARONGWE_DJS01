@@ -30,6 +30,10 @@ h1 {
   color: var(--text);
 }
 
+img {
+  border-radius: 8px;
+}
+
 label {
   font-size: 20px;
   color: var(--text);
@@ -99,6 +103,8 @@ option {
 
 .card {
   background: var(--card-bg);
+  border: var(--text-muted) 0.2px solid;
+  border-radius: 16px;
   padding: 24px;
 }
 
@@ -202,7 +208,7 @@ option {
 =============================================================
 */
 
-@media (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 739px) {
   h1 {
     font-size: 16px;
     margin-top: 0;
@@ -261,7 +267,7 @@ option {
   .card {
     width: 320px;
     background: var(--card-bg);
-    padding: 14px;
+    padding: 12px;
   }
 
   .text-muted {
@@ -289,12 +295,76 @@ option {
 
   .season-row {
     width: 40vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: solid 1px var(--border-line);
     padding: 20px;
-    margin: 8px 0px 8px 0px;
-    border-radius: 16px;
+  }
+}
+
+/*
+=============================================================
+  TABLET STYLING
+=============================================================
+*/
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  h1 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+
+  label {
+    font-size: 12px;
+  }
+  select {
+    padding: 4px;
+  }
+
+  .podcast-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .cover {
+    width: 310px;
+    height: 200px;
+    margin: 4px;
+  }
+  .card {
+    width: 320px;
+    background: var(--card-bg);
+    padding: 14px;
+  }
+
+  .text-muted {
+    font-size: 12px;
+  }
+
+  .modal {
+    background: var(--card-bg);
+    width: 600px;
+    height: 600px;
+    padding: 20px;
+  }
+
+  .podcast-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+  }
+  .season-row {
+    width: 50vh;
+    padding: 24px 6px;
   }
 }
