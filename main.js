@@ -32,7 +32,11 @@ podcasts.forEach((podcast) => {
       seasonsInfo: pod.seasonTitles(),
     });
     modalContainer.appendChild(modal);
-    modalState(modal).openModal;
+    modalContainer.style.display = "block";
+    const { openModal, closeModal } = modalState(modalContainer);
+    openModal(modal);
+
+    modal.querySelector(".modal-close").addEventListener("click", closeModal);
   });
 
   podGrid.appendChild(podcastCard);

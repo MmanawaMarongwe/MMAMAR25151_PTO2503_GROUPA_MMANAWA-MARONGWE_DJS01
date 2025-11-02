@@ -1,12 +1,14 @@
-export function modalState(modalContent) {
-  const isOpen = false;
-
+// accepts the container; controls it internally
+export function modalState(modalContainer) {
   return {
-    openModal() {
+    openModal(modalContent) {
       modalContainer.innerHTML = "";
       modalContainer.appendChild(modalContent);
-      modalContainer.classList = "open";
-      isOpen = true;
+      modalContainer.style.display = "block";
+    },
+    closeModal() {
+      modalContainer.style.display = "none";
+      modalContainer.innerHTML = "";
     },
   };
 }
