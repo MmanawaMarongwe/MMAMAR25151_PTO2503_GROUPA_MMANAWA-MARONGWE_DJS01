@@ -36,7 +36,18 @@ podcasts.forEach((podcast) => {
     const { openModal, closeModal } = modalState(modalContainer);
     openModal(modal);
 
-    modal.querySelector(".modal-close").addEventListener("click", closeModal);
+    modalContainer.addEventListener("click", (e) => {
+      if (e.target === modalContainer) closeModal();
+    });
+
+    modal.querySelector(".modal-close").addEventListener("click", (e) => {
+      e.stopPropagation();
+      closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeModal();
+    });
   });
 
   podGrid.appendChild(podcastCard);
