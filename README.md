@@ -30,26 +30,41 @@ The app focuses on modular code architecture, OOP principles, and clean, maintai
 - The modal can be closed via:
   - Overlay click  
   - Close button  
-  - Escape key  
+  - Escape key
 
-### 3. Code Architecture & Best Practices
-
-- Use **object-oriented programming (OOP)** where appropriate.
-- Apply **functional programming principles** to ensure modularity and predictability.
-- Follow **SOLID design principles** for clean, maintainable code.
-- Abstract repeated logic into **reusable functions or classes**.
-- Add **JSDoc comments** for major functions and modules.
+---
+## 🛠️ Tech Stack  
+- **HTML5**  
+- **CSS3** (Responsive, mobile-first design)  
+- **JavaScript (ES6 Modules)**  
 
 ---
 
-## Technical Requirements
+## 📖 How to Use  
+1. Open `index.html` in your browser using **Live Server**).  
+2. Browse the **podcast previews** displayed on the landing page.  
+3. Click a podcast card to **open the modal** and view detailed information.  
+4. Close the modal by clicking the **overlay**, **close button**, or pressing the **Escape key**.  
 
-- Use **HTML, CSS (or Tailwind), and JavaScript**.
-- No page reloads: Use JavaScript to handle modal behaviour and data rendering.
-- Ensure all UI states (modal open/close, hover effects, etc.) work smoothly.
-- Ensure all data is displayed in a **readable and accessible format**.
+
+## 🧩 Code Architecture  
+
+| Module | Responsibility |
+|---------|----------------|
+| `data.js` | Contains podcast, genre, and season data |
+| `createOption.js` | Builds dropdown options dynamically |
+| `createCard.js` | Creates podcast preview cards |
+| `makePodcast.js` | Constructs podcast data objects and helper methods |
+| `createModal.js` | Generates the modal element |
+| `modalState.js` | Manages modal open/close state |
+| `renderModal.js` | Handles displaying and rendering modals (refactored helper) |
+| `createPodcastApp.js` | Main factory function connecting data, UI, and helpers |
+| `main.js` | Entry point — initializes and launches the app |
+
+Each module follows **Single Responsibility**, ensuring clear, reusable, and testable code.  
 
 ---
+
 
 ## Design & UX Goals
 
