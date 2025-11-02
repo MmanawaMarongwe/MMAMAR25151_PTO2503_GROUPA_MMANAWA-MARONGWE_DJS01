@@ -64,19 +64,20 @@ The app focuses on modular code architecture, OOP principles, and clean, maintai
 Each module follows **Single Responsibility**, ensuring clear, reusable, and testable code.  
 
 ---
+## 🧠 Code Quality  
+- Follows **SOLID** principles for structure and maintainability.  
+- Written using **ES6+** features (destructuring, template literals, arrow functions).  
+- Modular organization ensures reusable, testable, and scalable code.  
+- Clear naming conventions and inline documentation for readability.  
 
+---
 
-## Design & UX Goals
+## 🎯 Future Improvements  
+- Add **genre-based filtering** functionality.  
+- Include a **search bar** for finding specific podcasts.  
+- Integrate a **real podcast API** for dynamic, live data.
 
-- Visually appealing UI with clear layout and hierarchy.
-- Use a consistent **colour scheme, typography, spacing, and sizing**.
-- Accessibility considerations (contrast, font readability, responsive buttons).
-- App should be fully **responsive** on desktop, tablet, and mobile.
-
-Make sure to dive into the wireframe reference images folder for guidance on how to build the UI structure. Note that the UI wireframes for both Desktop and Mobile are included.  
-
-![alt text](<wireframe reference images/desktop view/desktop_modal_view.png>)
-
+  
 ---
 
 ## Deliverables
