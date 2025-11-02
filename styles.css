@@ -132,19 +132,21 @@ option {
   display: none; /* hidden by default */
   justify-content: center; /* center modal horizontally */
   align-items: center; /* center modal vertically */
+  max-height: 30vh;
 }
 
 .modal {
   background: var(--card-bg);
   width: 55rem;
-  height: 55rem;
+  height: 40rem;
   padding: 32px;
   position: absolute;
   left: 50%;
-  top: 70%;
+  top: 60%;
   transform: translate(-50%, -50%);
   border-radius: 0.625rem;
   opacity: 85;
+  overflow-y: auto;
 }
 
 .modal-image {

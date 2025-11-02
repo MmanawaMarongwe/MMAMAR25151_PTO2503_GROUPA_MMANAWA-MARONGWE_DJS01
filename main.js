@@ -1,4 +1,4 @@
-import { genres, podcasts } from "./modules/data.js";
+import { genres, podcasts, seasons } from "./modules/data.js";
 import { createOpt } from "./modules/createOption.js";
 import { createCard } from "./modules/createCard.js";
 import { makePodcast } from "./modules/makePodcast.js";
@@ -13,7 +13,7 @@ genres.forEach((genre) => {
 });
 
 podcasts.forEach((podcast) => {
-  const pod = makePodcast(podcast, genres);
+  const pod = makePodcast(podcast, genres, seasons);
   const podcastCard = createCard({
     cover: pod.image,
     name: pod.title,
@@ -27,13 +27,12 @@ podcasts.forEach((podcast) => {
       cover: pod.image,
       name: pod.title,
       description: pod.description,
-      seasons: pod.seasons,
       genreTags: pod.genreNames(),
       lastUpdate: pod.formattedUpdatedAt(),
+      seasonsInfo: pod.seasonTitles(),
     });
     modalContainer.appendChild(modal);
     modalState(modal).openModal;
-    console.dir(modalContainer);
   });
 
   podGrid.appendChild(podcastCard);
