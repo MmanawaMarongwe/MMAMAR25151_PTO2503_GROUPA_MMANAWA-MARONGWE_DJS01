@@ -4,9 +4,25 @@ export function createModal({
   description,
   genreTags = [],
   lastUpdate,
+  seasonsInfo = [],
 }) {
   const modal = document.createElement("div");
   modal.className = "modal";
+  const seasonsHTML = seasonsInfo
+    .map(({ title, episodes }, i) => {
+      const sTitle = title || `Season ${i + 1}`;
+      const ep = Number(episodes) ?? 0;
+      return `
+        <div class="season">
+          <div class="season-row">
+            <strong class="season-title">${sTitle}</strong>
+            <span class="text-muted">${ep} episode${ep === 1 ? "" : "s"}</span>
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+
   modal.innerHTML = `<h2>${name}</h2>
     <div class = "podcast-info">
         <div class = "image-grid">
@@ -23,15 +39,17 @@ export function createModal({
             </div>
             <p class="text-muted">Last updated ${lastUpdate}</p>
         </div>
+        <div>
+            <h2>Seasons</h2>
+            <div>
+              ${seasonsHTML}
+            </div>
+        </div>
+        
     </div> 
-    <div>
        
     `;
 
   return modal;
 }
-/*<h1>Seasons</h1>
-            <div>${seasonsInfo
-              .map((season) => `<div class="season"> ${season}</div>`)
-              .join("")}</div>
-    </div>*/
+/*  */
