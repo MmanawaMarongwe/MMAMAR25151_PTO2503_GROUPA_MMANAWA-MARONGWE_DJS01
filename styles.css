@@ -154,23 +154,27 @@ option {
 }
 
 .modal-image {
-  width: 300px;
+  width: 350px;
   height: 300px;
+  margin-top: 0;
+  border-radius: 8px;
 }
 
 .podcast-info {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 32px;
-  align-items: center;
+  border: var(--text-muted) 0.5px solid;
+  padding: 16px;
 }
 
 .image-grid {
-  grid-column: span 2;
+  grid-column: span 3;
+  margin-top: 16px;
 }
 
 .info-grid {
-  grid-column: span 3;
+  grid-column: span 4;
 }
 
 .season-row {
