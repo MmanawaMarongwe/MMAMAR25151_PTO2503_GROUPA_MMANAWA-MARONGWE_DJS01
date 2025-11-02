@@ -5,8 +5,9 @@
  * @param {Array<Object>} genres - All genre objects to match IDs and return their names.
  * @returns {Object} A podcast object with formatted data and utility functions
  */
-export function makePodcast(podcastData, genres) {
+export function makePodcast(podcastData, genres, seasons) {
   const genreTitleById = (id) => genres.find((g) => g.id === id)?.title;
+  const seasonsById = (id) => seasons.find((s) => s.id === id)?.seasonDetails;
 
   return {
     id: podcastData.id,
@@ -35,13 +36,9 @@ export function makePodcast(podcastData, genres) {
       if (diffInDays < 30) return `${Math.floor(diffInDays / 7)} weeks ago`;
       return `${Math.floor(diffInDays / 30)} months ago`;
     },
-
-    seasonSummaries() {
-      const seasons = podcastData.seasons || [];
-      return seasons.map((s) => ({
-        title: s.title,
-        count: (s.episodes || []).length,
-      }));
+    seasonTitles() {
+      const seasonInfo = seasonsById(podcastData.id);
+      return seasonInfo;
     },
   };
 }
